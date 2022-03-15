@@ -1,7 +1,8 @@
 import FeedbackItem from "./FeedbackItem";
 import PropTypes from 'prop-types'
+import { computeHeadingLevel } from "@testing-library/react";
 
-function FeedbackList({ feedbackParam }) {
+function FeedbackList({ feedbackParam, handleDelete }) {
   if (!feedbackParam || feedbackParam.length === 0) {
     return <p>No Feedback Yet</p>;
   }
@@ -9,7 +10,7 @@ function FeedbackList({ feedbackParam }) {
   return (
     <div className="feedback-list">
       {feedbackParam.map((item) => (
-        <FeedbackItem key={item.id} itemParam={item} />
+        <FeedbackItem key={item.id} itemParam={item} handleDelete ={handleDelete} />
       ))}
     </div>
   );
