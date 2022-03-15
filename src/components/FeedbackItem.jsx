@@ -1,10 +1,10 @@
 
-function FeedbackItem({item}) {
+function FeedbackItem({itemParam}) {
 
   return (
     <div className="card">
-        <div className="num-display">{item.rating}</div>
-        <div className="text-display">{item.text}</div>
+        <div className="num-display">{itemParam.rating}</div>
+        <div className="text-display">{itemParam.text}</div>
     </div>
   )
 }
