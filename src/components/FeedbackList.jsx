@@ -1,6 +1,5 @@
 import FeedbackItem from "./FeedbackItem";
 import PropTypes from 'prop-types'
-import { computeHeadingLevel } from "@testing-library/react";
 
 function FeedbackList({ feedbackParam, handleDelete }) {
   if (!feedbackParam || feedbackParam.length === 0) {
