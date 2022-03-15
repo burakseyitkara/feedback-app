@@ -1,8 +1,16 @@
 import PropTypes from "prop-types";
 
-function Header({ text }) {
+function Header({ text,bgColor,textColor }) {
+
+    const headerStyle = {   
+        backgroundColor: bgColor,
+        color: textColor,
+    }
+
+
+
   return (
-    <header>
+    <header style={headerStyle}>
       <div className="container">
         <h2>{text}</h2>
       </div>
@@ -11,12 +19,16 @@ function Header({ text }) {
 }
 
 Header.defaultProps = {
-  // text paramatresi gönderilmez ise default param.
-  text: 'Feedback UI',
+  text: 'Feedback UI',// text paramatresi gönderilmez ise default param.
+  bgColor: 'rgba(0,0,0,0.4)',
+  textColor: '#ff6a95',
 };
 
 Header.propTypes = { 
-    text: PropTypes.string, 
-} // text parametresi string olacak dedik.
+    text: PropTypes.string, // text parametresi string olacak dedik.
+    bgColor: PropTypes.string, // text parametresi string olacak dedik.
+    textColor: PropTypes.string, // text parametresi string olacak dedik.
+    
+} 
 
 export default Header;
